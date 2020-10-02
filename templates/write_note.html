@@ -1,0 +1,24 @@
+{%extends "layout.html" %}
+
+{% block sub_content %}
+<div class="text-center">
+  <h1> Write a new note </h1>
+</div>
+
+<div class="row">
+ <div class="col-sm-4 col-sm-offset-4">
+    <form class="was-validated" method="POST">
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" class="form-control" id="title" placeholder="Enter the note title" name="title" required>
+      </div>
+      <div class="form-group">
+        <label for="body">Note details:</label>
+        <textarea class="form-control" id="body" rows="5" name="body"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+ </div>
+</div>
+
+{% endblock %}

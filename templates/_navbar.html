@@ -1,0 +1,27 @@
+<nav class="navbar navbar-default">
+  <div class="navbar-header">
+      <a class="navbar-brand" href="/noteapp">MyNotes</a>
+    </div>
+    <ul class="nav navbar-nav">
+      {% if session.login %}
+      <li><a href="/noteapp">Home</a></li>
+      <li><a href="/write-note">Write a note</a></li>
+      <li><a href="/my-notes">Edit my notes</a></li>
+      {% endif %}
+      <li><a href="/about">About</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      {% if session.login %}
+      <li>
+        <a href="/logout">Logout</a>
+      </li>
+      {% else %}
+      <li>
+        <a href="/login">Login</a>
+      </li>
+      <li>
+        <a href="/register">Register</a>
+      </li>
+      {% endif %}
+    </ul>
+</nav>
