@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block sub_content %}
+  {% if blogs %}
+    {% for blog in blogs %}
+      <h3> <a href="/notes/{{ blog['todo_id'] }}">{{blog['title']}} </a> </h3>
+
+      <hr>
+    {% endfor %}
+  {% else %}
+    <h3>No notes have been written yet</h3>
+  {% endif %}
+{% endblock %}
