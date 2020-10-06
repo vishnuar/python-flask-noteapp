@@ -14,9 +14,11 @@ This application helps to add notes which is essential in our daily life. Applic
 * Create a MySQL DB.
 * Require two tables, ```user``` for stroring the user details. ```todo``` for storing the todos created by the user.
 * Create the ```user``` table by executing below query
-```CREATE TABLE user(user_id int auto_increment, first_name varchar(20), last_name varchar(20), username varchar(20) unique, email varchar(30) unique, password varchar(100), primary key(user_id));```
+
+    ```CREATE TABLE user(user_id int auto_increment, first_name varchar(20), last_name varchar(20), username varchar(20) unique, email varchar(30) unique, password varchar(100), primary key(user_id));```
 * Create the ```todo``` table by executing below query
-```CREATE TABLE todo(todo_id int auto_increment, user_id int, title varchar(100), body varchar(1000), primary key(todo_id));```
+
+    ```CREATE TABLE todo(todo_id int auto_increment, user_id int, title varchar(100), body varchar(1000), primary key(todo_id));```
 * Make sure the DB connection details are properly updated in ```flask_app.py``` file.
 
 ## Checkout & Build
